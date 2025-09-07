@@ -2,6 +2,8 @@
 /target/
 .idea/
 
+.server/
+
 # Compiled class file
 *.class
 

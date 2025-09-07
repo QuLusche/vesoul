@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.6.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -40,6 +40,14 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>com.tcoded.folialib</pattern>
+                            <shadedPattern>fr.molequle.qulusche.Vesoul.lib.folialib</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
             </plugin>
         </plugins>
         <resources>
@@ -63,7 +71,7 @@
 
         <repository>
             <id>central</id>
-            <url>https://repo1.maven.org/maven2/</url>
+            <url>https://repo.tcoded.com/releases</url>
         </repository>
     </repositories>
 
@@ -81,6 +89,7 @@
             <groupId>com.tcoded</groupId>
             <artifactId>FoliaLib</artifactId>
             <version>0.5.1</version>
+            <scope>compile</scope>
         </dependency>
 
         <!-- Lombok -->

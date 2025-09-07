@@ -4,3 +4,4 @@ main: fr.molequle.qulusche.Vesoul
 api-version: '1.21'
 authors: [ QuLusche ]
 website: https://github.com/ql-molequle
+folia-supported: true
