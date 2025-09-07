@@ -55,13 +55,34 @@
             <id>papermc-repo</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
+
+        <repository>
+            <id>tcoded-releases</id>
+            <url>https://repo.tcoded.com/releases/</url>
+        </repository>
     </repositories>
 
     <dependencies>
+        <!-- Folia API -->
         <dependency>
             <groupId>dev.folia</groupId>
             <artifactId>folia-api</artifactId>
             <version>1.21.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Folia API -->
+        <dependency>
+            <groupId>com.tcoded</groupId>
+            <artifactId>FoliaLib</artifactId>
+            <version>0.5.1</version>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
