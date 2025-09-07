@@ -1,21 +1,26 @@
 package fr.molequle.qulusche;
 
 import com.tcoded.folialib.FoliaLib;
+import fr.molequle.qulusche.database.DatabaseManager;
 import lombok.Getter;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Vesoul extends JavaPlugin {
 
-	public static Plugin plugin;
+	public static Vesoul plugin;
 
 	@Getter
 	private FoliaLib foliaLib;
+
+	@Getter
+	public static DatabaseManager databaseManager;
 
 	@Override
 	public void onEnable() {
 		plugin = this;
 		foliaLib = new FoliaLib(this);
+
+		databaseManager = new DatabaseManager(this);
 
 		getLogger().info("Vesoul plugin enabled");
 	}
@@ -27,4 +32,6 @@ public final class Vesoul extends JavaPlugin {
 
 		getLogger().info("Vesoul plugin disabled");
 	}
+
+
 }
