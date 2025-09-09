@@ -8,12 +8,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class Vesoul extends JavaPlugin {
 
 	public static Vesoul plugin;
+	public static DatabaseManager databaseManager;
 
 	@Getter
 	private FoliaLib foliaLib;
-
-	@Getter
-	public static DatabaseManager databaseManager;
 
 	@Override
 	public void onEnable() {
